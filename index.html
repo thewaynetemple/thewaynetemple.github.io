@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopRunner Scraper</title>
+</head>
 <body>
 
 <style>
@@ -184,12 +190,11 @@
 
     .clearfix {
 
-    &
-    :after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    &:after {
+         content: "";
+         display: table;
+         clear: both;
+     }
 
     }
 
@@ -2131,4 +2136,12 @@
         </fieldset>
     </form>
 </div>
+
+<!-- build:js /scripts/bookmarklet-v3-gui.js -->
+<script type="text/javascript" src="/scrapingData.js"></script>
+<script type="text/javascript" src="/gui.js"></script>
+<script type="text/javascript" src="/bookmarklet.js"></script>
+<!-- endbuild -->
+
 </body>
+</html>
