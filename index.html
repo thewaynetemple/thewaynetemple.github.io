@@ -183,11 +183,13 @@
     }
 
     .clearfix {
-    &:after {
-         content: "";
-         display: table;
-         clear: both;
-     }
+
+    &
+    :after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
     }
 
@@ -472,6 +474,7 @@
     .field-name-container .attribute-value-display {
         padding-left: 25px;
     }
+
     /* </hacks> */
 
     .css-selector {
@@ -517,7 +520,7 @@
     }
 
     .fields_card {
-        box-shadow:  0 0 3px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .26);
+        box-shadow: 0 0 3px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .26);
         margin-bottom: 20px;
         padding-bottom: 15px;
     }
@@ -536,7 +539,7 @@
     }
 
     .field-summary-container .field-name:after {
-        content:  ":";
+        content: ":";
     }
 
     .image-field {
@@ -625,7 +628,7 @@
                     </div>
                     <span class="error"></span>
 
-                    <div class="input-modsearch
+                    <div class="input-modal">
                         <div class="input-modal-inner">
                             <div>
                                 <input id="category-page-selector-type-js" type="radio"
@@ -1101,7 +1104,9 @@
                         <button class="input-modal-trigger">►</button>
                     </div>
                     <div class="field-name-container">
-                        <h2>SKU<sup>*</sup>: <pre><span class="field-value"></span></pre></h2>
+                        <h2>SKU<sup>*</sup>:
+                            <pre><span class="field-value"></span></pre>
+                        </h2>
                     </div>
                     <span class="error"></span>
 
@@ -1156,7 +1161,9 @@
                         <button class="input-modal-trigger">►</button>
                     </div>
                     <div class="field-name-container">
-                        <h2>Doc ID<sup>*</sup>: <pre><span class="field-value"></span></pre></h2>
+                        <h2>Doc ID<sup>*</sup>:
+                            <pre><span class="field-value"></span></pre>
+                        </h2>
                     </div>
                     <span class="error"></span>
 
@@ -1214,7 +1221,9 @@
                         <button class="input-modal-trigger">►</button>
                     </div>
                     <div class="field-name-container">
-                        <h2>Click<sup>*</sup>: <pre><span class="field-value"></span></pre></h2>
+                        <h2>Click<sup>*</sup>:
+                            <pre><span class="field-value"></span></pre>
+                        </h2>
                     </div>
                     <span class="error"></span>
 
@@ -1268,7 +1277,9 @@
                         <button class="input-modal-trigger">►</button>
                     </div>
                     <div class="field-name-container">
-                        <h2>Change<sup>*</sup>: <pre><span class="field-value"></span></pre></h2>
+                        <h2>Change<sup>*</sup>:
+                            <pre><span class="field-value"></span></pre>
+                        </h2>
                     </div>
                     <span class="error"></span>
 
@@ -1322,7 +1333,9 @@
                         <button class="input-modal-trigger">►</button>
                     </div>
                     <div class="field-name-container">
-                        <h2>Add to Cart<sup>*</sup>: <pre><span class="field-value"></span></pre></h2>
+                        <h2>Add to Cart<sup>*</sup>:
+                            <pre><span class="field-value"></span></pre>
+                        </h2>
                     </div>
                     <span class="error"></span>
 
@@ -1381,7 +1394,7 @@
                         <button class="input-modal-trigger">►</button>
                     </div>
                     <div class="field-name-container">
-                        <h2>External brand: <span class="field-value"></span></h2>
+                        <h2>Cart Subtotal: <span class="field-value"></span></h2>
                     </div>
                     <span class="error"></span>
 
@@ -1484,629 +1497,638 @@
                     </div>
                 </div>
             </div>
-</div>
 
-<!-- CART TAX -->
-<div id="cart-tax" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Cart Tax: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
 
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="cart-tax-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="cart-tax-selector-type" value="js">
-                <label for="cart-tax-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="cart-tax-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="cart-tax-selector-type" value="css">
-                <label for="cart-tax-selector-type-css">CSS selector</label>
-            </div>
+            <!-- CART TAX -->
+            <div id="cart-tax" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Cart Tax: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Cart Tax Selector"/>
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="cart-tax-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="cart-tax-selector-type" value="js">
+                            <label for="cart-tax-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="cart-tax-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="cart-tax-selector-type" value="css">
+                            <label for="cart-tax-selector-type-css">CSS selector</label>
+                        </div>
 
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
-            </div>
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Cart Tax Selector"/>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
                     </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- CART DISCOUNT -->
-<div id="cart-discount" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Cart Discount: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="cart-discount-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="cart-discount-selector-type" value="js">
-                <label for="cart-discount-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="cart-discount-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="cart-discount-selector-type" value="css">
-                <label for="cart-discount-selector-type-css">CSS selector</label>
+                </div>
             </div>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Cart Discount Selector"/>
 
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
+            <!-- CART DISCOUNT -->
+            <div id="cart-discount" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Cart Discount: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="cart-discount-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="cart-discount-selector-type" value="js">
+                            <label for="cart-discount-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="cart-discount-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="cart-discount-selector-type" value="css">
+                            <label for="cart-discount-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Cart Discount Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
+
+            <!-- CART GIFT CARD -->
+            <div id="cart-gift-card" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Cart Gift Card: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="cart-gift-card-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="cart-gift-card-selector-type" value="js">
+                            <label for="cart-gift-card-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="cart-gift-card-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="cart-gift-card-selector-type" value="css">
+                            <label for="cart-gift-card-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Cart Gift Card Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
                     </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- CART GIFT CARD -->
-<div id="cart-gift-card" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Cart Gift Card: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="cart-gift-card-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="cart-gift-card-selector-type" value="js">
-                <label for="cart-gift-card-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="cart-gift-card-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="cart-gift-card-selector-type" value="css">
-                <label for="cart-gift-card-selector-type-css">CSS selector</label>
-            </div>
-
-            <div class="css-selector">
-                <input class="selector" placeholder="Cart Gift Card Selector"/>
-
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
-            </div>
-
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
-                    </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- CART TOTAL -->
-<div id="cart-total" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Cart Total: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="cart-total-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="cart-total-selector-type" value="js">
-                <label for="cart-total-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="cart-total-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="cart-total-selector-type" value="css">
-                <label for="cart-total-selector-type-css">CSS selector</label>
+                </div>
             </div>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Cart Total Selector"/>
 
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
+            <!-- CART TOTAL -->
+            <div id="cart-total" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Cart Total: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="cart-total-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="cart-total-selector-type" value="js">
+                            <label for="cart-total-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="cart-total-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="cart-total-selector-type" value="css">
+                            <label for="cart-total-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Cart Total Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
+
+            <!-- ITEMS IN CART -->
+            <div id="items-in-cart" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Items In Cart: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="items-in-cart-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="items-in-cart-selector-type" value="js">
+                            <label for="items-in-cart-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="items-in-cart-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="items-in-cart-selector-type" value="css">
+                            <label for="items-in-cart-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Items In Cart Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
                     </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- ITEMS IN CART -->
-<div id="items-in-cart" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Items In Cart: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="items-in-cart-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="items-in-cart-selector-type" value="js">
-                <label for="items-in-cart-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="items-in-cart-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="items-in-cart-selector-type" value="css">
-                <label for="items-in-cart-selector-type-css">CSS selector</label>
-            </div>
-
-            <div class="css-selector">
-                <input class="selector" placeholder="Items In Cart Selector"/>
-
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
-            </div>
-
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
-                    </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- ITEMS IN CART SELECTORS -->
-<!-- Dunno about this one, likely needs refactor -->
-<div id="items-in-cart-selectors" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>External brand: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="items-in-cart-selectors-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="items-in-cart-selectors-selector-type" value="js">
-                <label for="items-in-cart-selectors-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="items-in-cart-selectors-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="items-in-cart-selectors-selector-type" value="css">
-                <label for="items-in-cart-selectors-selector-type-css">CSS selector</label>
+                </div>
             </div>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Cart Subtotal Selector"/>
 
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
+            <!-- ITEMS IN CART SELECTORS -->
+            <!-- Dunno about this one, likely needs refactor -->
+            <div id="items-in-cart-selectors" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>External brand: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="items-in-cart-selectors-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="items-in-cart-selectors-selector-type" value="js">
+                            <label for="items-in-cart-selectors-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="items-in-cart-selectors-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="items-in-cart-selectors-selector-type" value="css">
+                            <label for="items-in-cart-selectors-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Cart Subtotal Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
+
+            <!-- ORDER ID -->
+            <div id="order-id" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Order ID<sup>*</sup>: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="order-id-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="order-id-selector-type" value="js">
+                            <label for="order-id-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="order-id-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="order-id-selector-type" value="css">
+                            <label for="order-id-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Order ID Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
                     </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- ORDER ID -->
-<div id="order-id" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Order ID<sup>*</sup>: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="order-id-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="order-id-selector-type" value="js">
-                <label for="order-id-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="order-id-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="order-id-selector-type" value="css">
-                <label for="order-id-selector-type-css">CSS selector</label>
-            </div>
-
-            <div class="css-selector">
-                <input class="selector" placeholder="Order ID Selector"/>
-
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
-            </div>
-
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
-                    </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-
-
-<!-- ORDER ID REGEX  (do we need this?) -->
-<div id="order-id-regex" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Order ID Regex<sup>*</sup>: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="order-id-regex-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="order-id-regex-selector-type" value="js">
-                <label for="order-id-regex-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="order-id-regex-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="order-id-regex-selector-type" value="css">
-                <label for="order-id-regex-selector-type-css">CSS selector</label>
+                </div>
             </div>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Order ID Regex"/>
 
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
+            <!-- ORDER ID REGEX  (do we need this?) -->
+            <div id="order-id-regex" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Order ID Regex<sup>*</sup>: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="order-id-regex-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="order-id-regex-selector-type" value="js">
+                            <label for="order-id-regex-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="order-id-regex-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="order-id-regex-selector-type" value="css">
+                            <label for="order-id-regex-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Order ID Regex"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
+            <!--  EMAIL  -->
+            <div id="email" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Email<sup>*</sup>: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
+
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="email-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="email-selector-type" value="js">
+                            <label for="email-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="email-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="email-selector-type" value="css">
+                            <label for="email-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Email Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
                     </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-
-<!--  EMAIL  -->
-<div id="email" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Email<sup>*</sup>: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="email-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="email-selector-type" value="js">
-                <label for="email-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="email-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="email-selector-type" value="css">
-                <label for="email-selector-type-css">CSS selector</label>
-            </div>
-
-            <div class="css-selector">
-                <input class="selector" placeholder="Email Selector"/>
-
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
-            </div>
-
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
-                    </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-
-<!-- PAYMENT TYPE -->
-<div id="payment-type" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Payment Type<sup>*</sup>: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
-
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="payment-type-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="payment-type-selector-type" value="js">
-                <label for="payment-type-selector-type-js">JS snippet</label>
-            </div>
-            <div>
-                <input id="payment-type-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="payment-type-selector-type" value="css">
-                <label for="payment-type-selector-type-css">CSS selector</label>
+                </div>
             </div>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Payment Type Selector"/>
+            <!-- PAYMENT TYPE -->
+            <div id="payment-type" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Payment Type<sup>*</sup>: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
 
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="payment-type-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="payment-type-selector-type" value="js">
+                            <label for="payment-type-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="payment-type-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="payment-type-selector-type" value="css">
+                            <label for="payment-type-selector-type-css">CSS selector</label>
+                        </div>
+
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Payment Type Selector"/>
+
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
-                    </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
+            <!-- SHIPPING TYPE -->
+            <div id="shipping-type" class="field-wrapper product-field-wrapper">
+                <div class="expand-button-container">
+                    <button class="input-modal-trigger">►</button>
+                </div>
+                <div class="field-name-container">
+                    <h2>Shipping Type<sup>*</sup>: <span class="field-value"></span></h2>
+                </div>
+                <span class="error"></span>
 
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
+                <div class="input-modal">
+                    <div class="input-modal-inner">
+                        <div>
+                            <input id="shipping-type-selector-type-js" type="radio"
+                                   class="field-type-selector selector-type-js"
+                                   name="shipping-type-selector-type" value="js">
+                            <label for="shipping-type-selector-type-js">JS snippet</label>
+                        </div>
+                        <div>
+                            <input id="shipping-type-selector-type-css" type="radio"
+                                   class="field-type-selector selector-type-css"
+                                   name="shipping-type-selector-type" value="css">
+                            <label for="shipping-type-selector-type-css">CSS selector</label>
+                        </div>
 
-<!-- SHIPPING TYPE -->
-<div id="shipping-type" class="field-wrapper product-field-wrapper">
-    <div class="expand-button-container">
-        <button class="input-modal-trigger">►</button>
-    </div>
-    <div class="field-name-container">
-        <h2>Shipping Type<sup>*</sup>: <span class="field-value"></span></h2>
-    </div>
-    <span class="error"></span>
+                        <div class="css-selector">
+                            <input class="selector" placeholder="Shipping Type Selector"/>
 
-    <div class="input-modal">
-        <div class="input-modal-inner">
-            <div>
-                <input id="shipping-type-selector-type-js" type="radio"
-                       class="field-type-selector selector-type-js"
-                       name="shipping-type-selector-type" value="js">
-                <label for="shipping-type-selector-type-js">JS snippet</label>
+                            <p>Attribute Selector</p>
+                            <input class="attribute" placeholder="Extract Attribute"/>
+                        </div>
+
+                        <div class="regex-error"></div>
+                        <ul class="regex-list">
+                            <li>
+                                <div class="regex-container">
+                                    <p>Regex - Find</p>
+                                    <input class="regex-from" placeholder="Regex From"/>
+                                </div>
+                                <div class="regex-container">
+                                    <p>Replace</p>
+                                    <input class="regex-to" placeholder="String To"/>
+                                </div>
+                                <div class="add-regex">
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button class="update-selector action-button">Update</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <input id="shipping-type-selector-type-css" type="radio"
-                       class="field-type-selector selector-type-css"
-                       name="shipping-type-selector-type" value="css">
-                <label for="shipping-type-selector-type-css">CSS selector</label>
+
+            <!-- JS editor dialog -->
+            <div id="js-editor-dialog" title="">
+                <div id="js-field-name"></div>
+                <div id="editor"></div>
             </div>
 
-            <div class="css-selector">
-                <input class="selector" placeholder="Shipping Type Selector"/>
-
-                <p>Attribute Selector</p>
-                <input class="attribute" placeholder="Extract Attribute"/>
+            <!-- Variants dialog -->
+            <div id="variants-dialog" title="Variants at the current page">
+                <div class="contents"></div>
             </div>
 
-            <div class="regex-error"></div>
-            <ul class="regex-list">
-                <li>
-                    <div class="regex-container">
-                        <p>Regex - Find</p>
-                        <input class="regex-from" placeholder="Regex From"/>
-                    </div>
-                    <div class="regex-container">
-                        <p>Replace</p>
-                        <input class="regex-to" placeholder="String To"/>
-                    </div>
-                    <div class="add-regex">
-                        <a href="#">+</a>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="update-selector action-button">Update</button>
-        </div>
-    </div>
-</div>
-
-<!-- JS editor dialog -->
-<div id="js-editor-dialog" title="">
-    <div id="js-field-name"></div>
-    <div id="editor"></div>
-</div>
-
-<!-- Variants dialog -->
-<div id="variants-dialog" title="Variants at the current page">
-    <div class="contents"></div>
-</div>
-
-<!-- Validation dialog -->
-<div id="validation-dialog" title="Running validation">
-    <div class="contents">
-        Congrats! You've started validation process.
-        <ul>
-            <li><a href="http://graylog.jellolabs.com/search?rangetype=relative&fields=&relative=3600&from=&to=&q=%22Running+validation+for+vendor%22" target="_blank">validation started confirmation</a>(for tracking request)</li>
-            <li><a href="http://graylog.jellolabs.com/search?rangetype=relative&fields=&relative=7200&from=&to=&q=%22Report+for+vendor%22" target="_blank">validation results</a> (available with a delay)</li>
-        </ul>
-    </div>
+            <!-- Validation dialog -->
+            <div id="validation-dialog" title="Running validation">
+                <div class="contents">
+                    Congrats! You've started validation process.
+                    <ul>
+                        <li>
+                            <a href="http://graylog.jellolabs.com/search?rangetype=relative&fields=&relative=3600&from=&to=&q=%22Running+validation+for+vendor%22"
+                               target="_blank">validation started confirmation</a>(for tracking request)
+                        </li>
+                        <li>
+                            <a href="http://graylog.jellolabs.com/search?rangetype=relative&fields=&relative=7200&from=&to=&q=%22Report+for+vendor%22"
+                               target="_blank">validation results</a> (available with a delay)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+    </form>
 </div>
 </body>
