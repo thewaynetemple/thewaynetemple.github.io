@@ -467,19 +467,6 @@
         vertical-align: top;
     }
 
-    /* <hacks to make attribute name/value look less gross.> */
-    .attribute-name-display-wrapper {
-        display: inline-block;
-    }
-
-    .attribute-value-display-wrapper {
-        display: block;
-    }
-
-    .field-name-container .attribute-value-display {
-        padding-left: 25px;
-    }
-
     /* </hacks> */
 
     .css-selector {
@@ -530,45 +517,8 @@
         padding-bottom: 15px;
     }
 
-    .variant-summary-container {
-        border-bottom: 1px dotted #666;
-        padding: 10px;
-    }
-
-    .field-summary-container .field-summary {
-        padding: 5px;
-    }
-
-    .field-summary-container .field-name {
-        font-weight: bold;
-    }
-
-    .field-summary-container .field-name:after {
-        content: ":";
-    }
-
-    .image-field {
-        display: inline;
-    }
-
-    .variants-image-thumb {
-        width: 100px;
-    }
-
-    #product-data.scraping {
-        background-color: #ccc;
-    }
-
     #product-data {
         background-color: white;
-    }
-
-    #variant-dimension-button-hidden-fields {
-        display: none;
-    }
-
-    .last-variant-dimension #variant-dimension-button-hidden-fields {
-        display: block;
     }
 
 </style>
@@ -579,7 +529,7 @@
     <div class="top clearfix"></div>
 
     <!-- ====== PRODUCT FIELDS ====== -->
-    <form id="product-data" action="" target="_blank">
+    <form id="product-data">
         <fieldset>
 
             <!--PAGE TYPES-->
