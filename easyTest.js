@@ -37,8 +37,9 @@ rawData.forEach((a)=> {i = a.split('='), trackingObj[i[0]] = i[1]});
 //
 let validate = document.querySelector('.update-selector');
 validate.addEventListener('click', () => {
-    if (homePageSelector.value) {
-        localStorage.setItem("home", homePageSelector.value);
+    if (homePageSelector.innerText) {
+        localStorage.setItem("home", homePageSelector.innerText);
+        alert(`${homePageSelector.innerText} saved to settings`)
     }
     // if (page_type_selector.value) {
     //     localStorage.setItem("page_type", page_type_selector.value);
