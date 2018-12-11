@@ -1,5 +1,5 @@
 const testButton = document.querySelector('.input-modal-trigger');
-testButton.addEventListener('click', () => document.querySelector('.input-modal').setAttribute('style', 'display: block'));
+testButton.addEventListener('click', () => alert('It\'s time to get ILL!!'));
 
 // document.querySelector('.page_type_selector').innerHTML = localStorage.getItem("page_type");
 // document.querySelector('.items_in_cart_selector').innerHTML = localStorage.getItem("items_in_cart");
