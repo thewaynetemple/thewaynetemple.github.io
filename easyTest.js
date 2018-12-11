@@ -2,7 +2,7 @@
 const testButton = document.querySelector('.input-modal-trigger');
 testButton.addEventListener('click', () => alert('It\'s time to get ILL!!'));
 
-let homePageSelector = document.querySelector('input .selector');
+let homePageSelector = document.querySelector('.css-selector');
 homePageSelector.innerText = localStorage.getItem("home") || '';
 // document.querySelector('.items_in_cart_selector').innerHTML = localStorage.getItem("items_in_cart");
 //
