@@ -1,7 +1,8 @@
+
 const testButton = document.querySelector('.input-modal-trigger');
 testButton.addEventListener('click', () => alert('It\'s time to get ILL!!'));
 
-let homePageSelector = document.querySelector('input.selector');
+let homePageSelector = document.querySelector('input .selector');
 homePageSelector.innerText = localStorage.getItem("home") || '';
 // document.querySelector('.items_in_cart_selector').innerHTML = localStorage.getItem("items_in_cart");
 //
@@ -37,9 +38,10 @@ rawData.forEach((a)=> {i = a.split('='), trackingObj[i[0]] = i[1]});
 //
 let validate = document.querySelector('.update-selector');
 validate.addEventListener('click', () => {
+    alert('YOU PUSHED ANOTHER BUTTON!')
+
     if (homePageSelector.innerText) {
         localStorage.setItem("home", homePageSelector.innerText);
-        alert(`${homePageSelector.innerText} saved to settings`)
     }
     // if (page_type_selector.value) {
     //     localStorage.setItem("page_type", page_type_selector.value);
