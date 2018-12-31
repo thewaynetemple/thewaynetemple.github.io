@@ -7,7 +7,7 @@ console.log('SELECTOR?', homePageSelector.innerText, 'AND ANOTHER THING!', docum
 homePageSelector.innerText = localStorage.getItem('home') || '';
 // document.querySelector('.items_in_cart_selector').innerHTML = localStorage.getItem("items_in_cart");
 //
-rawData = "auth_token=&sr_browser_id=4e0908b5-24ca-452a-b321-83a09ce494f2&pik_session_id=a305d218-ed46-85b-4b61-a2655343568&retailer_code=WHBM&experiments=mso%3A2%2Cls_1%3A2&page_url=http%3A%2F%2Fpikmonitor.s-9.us%2Fdivs%2Fstaging%2FWHBM&page_title=WHBM+(Staging)&sku=&doc_id=&referrer=&page_id=1543868022003&utm_medium=null&utm_content=null&country=undefined&loyalty_id=undefined&customer_email=undefined&page_type=cart&cart_total=&cart_subtotal=38.94&cart_shipping=&cart_discount=&cart_gift_card=&cart_tax=&items_in_cart=".split('&'); //atob(sr_$.model.data).split('&')
+rawData = atob(sr_$.model.data).split('&')
 trackingObj = {};
 rawData.forEach((a)=> {i = a.split('='), trackingObj[i[0]] = i[1]});
 //
